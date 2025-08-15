@@ -12,7 +12,7 @@ def create_app():
     app = Flask(__name__)
 
     # Enable CORS for all domains on all routes
-    port = int(os.getenv('PORT', 5000))
+    port = int(os.getenv('REACT_PORT', 5173))
     CORS(app, origins=[f"http://localhost:{port}", f"http://127.0.0.1:{port}"])
 
     # Config (optional - can be removed if config.py doesn't exist)

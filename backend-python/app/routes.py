@@ -251,33 +251,33 @@ def answer_question():
     })
 
 
-@bp.route("/diagnostic/restart_instructions/photo_upload", methods=["POST"])
-def answer_question():
-
-    data = request.get_json()
-
-    if not data or "session_id" not in data or "answer" not in data:
-        return jsonify({
-            "error": "Please send JSON with 'session_id' and 'answer' fields",
-            "example": {"session_id": "user123_session456", "answer": True}
-        }), 400
-
-    session_id = data["session_id"]
-    ic(data["answer"], session_id)
-    # answer = bool(data["answer"])
-    answer = data["answer"]
-
-    result = answer_diagnostic_question(session_id, answer)
-
-    if "error" in result:
-        return jsonify(result), 400
-
-    return jsonify({
-        "complete": result["complete"],
-        "next_question": result.get("next_question"),
-        "recommendation": result.get("recommendation"),
-        "status": "success"
-    })
+# @bp.route("/diagnostic/restart_instructions/photo_upload", methods=["POST"])
+# def answer_question():
+#
+#     data = request.get_json()
+#
+#     if not data or "session_id" not in data or "answer" not in data:
+#         return jsonify({
+#             "error": "Please send JSON with 'session_id' and 'answer' fields",
+#             "example": {"session_id": "user123_session456", "answer": True}
+#         }), 400
+#
+#     session_id = data["session_id"]
+#     ic(data["answer"], session_id)
+#     # answer = bool(data["answer"])
+#     answer = data["answer"]
+#
+#     result = answer_diagnostic_question(session_id, answer)
+#
+#     if "error" in result:
+#         return jsonify(result), 400
+#
+#     return jsonify({
+#         "complete": result["complete"],
+#         "next_question": result.get("next_question"),
+#         "recommendation": result.get("recommendation"),
+#         "status": "success"
+#     })
 
 
 

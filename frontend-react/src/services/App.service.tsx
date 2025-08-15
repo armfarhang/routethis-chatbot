@@ -1,5 +1,5 @@
 import axios from "axios";
-const API_PORT = import.meta.env.VITE_API_PORT || "5000";
+const API_PORT = import.meta.env.VITE_FLASK_API_PORT || "5000";
 const API_BASE_URL = `http://127.0.0.1:${API_PORT}`;
 
 // API Response interface
