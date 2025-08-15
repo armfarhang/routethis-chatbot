@@ -1,0 +1,62 @@
+<diagram program="umletino" version="15.1"><zoom_level>9</zoom_level><element><id>UMLNote</id><coordinates><x>72</x><y>117</y><w>369</w><h>423</h></coordinates><panel_attributes>bg=blue
+This take-home technical challenge is meant to assess your technical skill and understanding of AI concepts. Once completed, you will then meet with members of the development team to discuss your implementation and work collaboratively to extend the solution in new ways.
+
+Take-home challenge instructions:
+Using a public github repository and the language / framework of your choice, develop a simple LLM interface that assists someone in solving their WiFi connectivity problems through executing a router reboot. Your solution should:
+
+Ask the user qualifying questions to determine whether a router reboot is appropriate. If not, exit the conversation gracefully.
+
+If a reboot is appropriate, walk the user through the reboot process.
+
+After the reboot, ask the user if their issue is resolved.
+
+If yes, gracefully end the conversation.
+
+If no, apologize and exit the conversation in a helpful manner.
+
+When you’re finished, please email kam.deep@routethis.com with a link to your GitHub repository and any instructions needed to run your code.
+
+style=wordwrap
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>954</x><y>117</y><w>189</w><h>171</h></coordinates><panel_attributes>&lt;&lt;Stereotype&gt;&gt;
+Package::FatClass
+{Some Properties}
+--
+-id: Long
+_-ClassAttribute: Long_
+--
+#Operation(i: int): int
+/+AbstractOperation()/
+--
+Responsibilities
+-- Resp1
+*-- Resp2*</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>72</x><y>585</y><w>315</w><h>297</h></coordinates><panel_attributes>Goals of The App
+--
+- Conversation Style communciation
+
+- Tokenization of the words for fruther anayysis
+
+- If info is required, the app provied  a prefilled list for the user to fill:
+e.g. Username: YourUsername
+RouterID: YourRouterID
+ModelName: YourModel Name
+
+- Confirmtion button are used to ensure the  program has understood the issue
+
+- a Preview of the issues mentioned is listed to give user the confrimation that the app is on track with the issues. Once a new issue is mentioned the list appedn an undertanding of that issue so the user sees.
+    - users can delete issue from the list and run diagnosis again from scratch 
+ 
+
+
+style=wordwrap
+bg=gray
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>432</x><y>585</y><w>315</w><h>297</h></coordinates><panel_attributes>Implementaion
+--
+
+ 
+
+
+style=wordwrap
+bg=gray
+
+</panel_attributes><additional_attributes></additional_attributes></element></diagram>

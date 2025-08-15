@@ -1,0 +1,38 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>165</x><y>560</y><w>210</w><h>150</h></coordinates><panel_attributes>Potential User Inputs 
+--
+- I have wifi issues
+- how to water my plants
+- give me prompts
+- I'l explain the situation
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1395</x><y>480</y><w>210</w><h>150</h></coordinates><panel_attributes>NER
+--
+return</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>275</x><y>240</y><w>210</w><h>210</h></coordinates><panel_attributes>Client
+--
+-chatVars: {
+   - is_networking_issue
+   - is_prompts
+   - diagnosis_vars: {
+        POWER_LED_ON
+        INTERNET_LED_ON
+        ROUTER_LOGIN_PAGE
+        OTHER_DEVICES_ISSUE
+        KEEPS_RECONNECTING
+         ...
+  
+    }
+}</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>1285</x><y>750</y><w>240</w><h>140</h></coordinates><panel_attributes>Algo
+--
+bg=orange
+
+pass all user text with variables to NER
+--&gt; if NER finds values for variables then it return a dict with the variables and their values
+
+style=wordwrap
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>895</x><y>230</y><w>190</w><h>30</h></coordinates><panel_attributes>pass all user msg to NER</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>745</x><y>340</y><w>190</w><h>30</h></coordinates><panel_attributes>if networking issue</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>715</x><y>470</y><w>190</w><h>30</h></coordinates><panel_attributes>ask for prompt or explain</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1055</x><y>300</y><w>190</w><h>30</h></coordinates><panel_attributes>if NOT networking issue</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1215</x><y>360</y><w>190</w><h>30</h></coordinates><panel_attributes>tell user chat is for tech support</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>895</x><y>700</y><w>240</w><h>40</h></coordinates><panel_attributes>if explain: tell user to explain all the probelm with as much detail
+style=wordwrap
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>505</x><y>700</y><w>240</w><h>40</h></coordinates><panel_attributes>if prompt, ask user for the rest of graph nodes
+
+
+style=wordwrap
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>655</x><y>540</y><w>300</w><h>30</h></coordinates><panel_attributes>promtp user for 3 first node of graph</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>965</x><y>630</y><w>300</w><h>30</h></coordinates><panel_attributes>if restart router</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>645</x><y>630</y><w>300</w><h>30</h></coordinates><panel_attributes>if NOT restart router</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>735</x><y>700</y><w>180</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;-
+after user explained</panel_attributes><additional_attributes>10;20;160;20</additional_attributes></element><element><id>Relation</id><coordinates><x>845</x><y>250</y><w>130</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;90;110;10</additional_attributes></element><element><id>Relation</id><coordinates><x>965</x><y>250</y><w>200</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>180;50;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>815</x><y>360</y><w>50</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;110;30;10</additional_attributes></element><element><id>Relation</id><coordinates><x>775</x><y>490</y><w>50</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>30;50;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1135</x><y>320</y><w>190</w><h>60</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>170;40;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>945</x><y>550</y><w>180</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>160;80;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>785</x><y>560</y><w>40</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>20;70;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>675</x><y>650</y><w>120</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;50;100;10</additional_attributes></element><element><id>Relation</id><coordinates><x>785</x><y>650</y><w>230</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>210;50;10;10</additional_attributes></element></diagram>

@@ -1,0 +1,195 @@
+/* Keyframe animations */
+@keyframes draw {
+    from {
+        stroke-dashoffset: var(--circumference);
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes blink {
+    0%, 100% { 
+        opacity: 1; 
+    }
+    50% { 
+        opacity: 0; 
+    }
+}
+
+/* Splash wrapper for fade transitions */
+.splash-wrapper {
+    transition: opacity 1s ease-out;
+}
+
+.splash-wrapper.fading {
+    opacity: 0;
+}
+
+/* Main container */
+.splash-container {
+    background-color: white;
+    font-family: sans-serif;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Logo container */
+.logo-container {
+    position: relative;
+    width: 192px; /* w-48 = 12rem = 192px */
+    height: 192px; /* h-48 = 12rem = 192px */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Center logo */
+.center-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    z-index: 1;
+}
+
+/* SVG styling */
+.logo-svg {
+    transform: rotate(-90deg);
+    width: 100%;
+    height: 100%;
+}
+
+/* Background circle */
+.background-circle {
+    stroke: #e5e7eb;
+    stroke-width: 2;
+    fill: none;
+}
+
+/* Animated circle */
+.animated-circle {
+    stroke: #4ade80;
+    stroke-width: 2;
+    fill: none;
+    stroke-linecap: round;
+    animation: draw 2s ease-in-out forwards;
+}
+
+/* Text container */
+.text-container {
+    position: absolute;
+    bottom: 64px; /* bottom-16 = 4rem = 64px */
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 600px;
+}
+
+/* Typing text */
+.typing-text {
+    font-size: 1.875rem; /* text-3xl = 1.875rem */
+    color: #4b5563; /* text-gray-600 */
+    letter-spacing: 0.1em; /* tracking-wider */
+    line-height: 1.2;
+}
+
+/* Cursor blink */
+.cursor-blink {
+    animation: blink 1s step-end infinite;
+    color: #4ade80; /* text-green-400 */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .logo-container {
+        width: 144px; /* Smaller on mobile */
+        height: 144px;
+    }
+    
+    .center-logo {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .typing-text {
+        font-size: 1.5rem; /* text-2xl = 1.5rem */
+        padding: 0 20px;
+    }
+    
+    .text-container {
+        bottom: 48px; /* Closer to bottom on mobile */
+        width: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-container {
+        width: 120px; /* Even smaller on very small screens */
+        height: 120px;
+    }
+    
+    .center-logo {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .typing-text {
+        font-size: 1.25rem; /* text-xl = 1.25rem */
+        padding: 0 16px;
+    }
+    
+    .text-container {
+        bottom: 32px;
+        width: 98%;
+    }
+}
+
+/* Landscape orientation on mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+    .splash-container {
+        flex-direction: row;
+        gap: 2rem;
+    }
+    
+    .logo-container {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .center-logo {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .text-container {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        transform: none;
+        width: auto;
+        max-width: 300px;
+    }
+    
+    .typing-text {
+        font-size: 1.25rem;
+    }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+    .animated-circle,
+    .background-circle {
+        stroke-width: 1.5;
+    }
+}
