@@ -1,8 +1,8 @@
-# Backend API
+# Backend API (Flask)
 
 Flask backend application for the RouteThis take-home project.
 
-## Prerequisites
+### Prerequisites
 
 - Python 3.7+
 - pip (Python package installer)
@@ -53,11 +53,11 @@ Flask backend application for the RouteThis take-home project.
    python run.py
    ```
 
-The application will start on `http://localhost:5173` if the `.env` is configured properly; otherwise, it will default to `http://localhost:5000`.
+The application will start on `http://localhost:5151` if the `.env` is configured properly; otherwise, it will default to `http://localhost:5000`.
 
 ## API Endpoints
 
-The application provides API endpoints accessible at `http://localhost:5173`. CORS is configured to allow requests from:
+The application provides API endpoints accessible at `http://localhost:5151`. CORS is configured to allow requests from the frontend:
 
 - `http://localhost:5173`
 - `http://127.0.0.1:5173`
@@ -77,15 +77,8 @@ backend/
 └── venv/                   # Virtual environment (created after setup)
 ```
 
-## Development
 
-The application runs in debug mode by default, which means:
-
-- Automatic reloading when code changes
-- Detailed error messages
-- Debug toolbar (if configured)
-
-## Troubleshooting
+### Troubleshooting
 
 - Make sure your virtual environment is activated before running the application.
 - Ensure all dependencies are installed with `pip install -r requirements.txt`.
@@ -152,3 +145,15 @@ In a strict tree, answering "No" at the root would ignore the other branch, whic
 ---
 
 ![QuestionGraph.uxf](README_assets/weighted_directed_graph.png)
+
+
+# Demo/Functionality
+Check out a demo of the application [here](https://drive.google.com/file/d/1XrYEpR7KAalru2Uh2xljXn09bUv4pAIL/view?usp=sharing).
+
+<img src="README_assets/functionality.png" alt="Activity page showing user interactions and diagnostic questions in a clean, organized layout. The interface displays a list of recent activities and troubleshooting steps, with clear labels and a neutral, professional tone." width="700"/>
+
+- The chat logo shows the chat view in the form of text.
+- The microphone button shows the chat agent and enables the agent to call back.
+- The speaker logo mutes the voice of the agent.
+- The microphone button in the bottom right corner is a speech-to-text converter.
+  
